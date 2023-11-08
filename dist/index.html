@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <title>Multi-step Form</title>
+</head>
+<body>
+  <div class="bg">
+    <nav>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </nav>
+    <main>
+      <form action="">
+        <div class="page page-info">
+          <div>
+            <h1>Personal Info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+          </div>
+          <div>
+            <label for="">Name</label>
+            <input type="text" name="name" id="name">
+            <p></p>
+          </div>
+          <div>
+            <label for="">Email Address</label>
+            <input type="email" name="email" id="email">
+            <p></p>
+          </div>
+          <div>
+            <label for="">Phone Number</label>
+            <input type="tel" name="phone" id="phone">
+            <p></p>
+          </div>
+          <div>
+            <button type="button">Next Step</button>
+          </div>
+        </div>
+        <div class="page page-plan">
+          <div>
+            <h1>Select your Plans</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+          </div>
+          <div>
+            <label for="plan-arcade">
+              <input type="radio" name="plan" id="plan-arcade">
+            </label>
+            <label for="plan-advanced">
+              <input type="radio" name="plan" id="plan-advanced">
+            </label>
+            <label for="plan-pro">
+              <input type="radio" name="plan" id="plan-pro">
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="plan-time" id="plan-time">
+          </div>
+          <div>
+            <button type="button">Go Back</button>
+            <button type="button">Next Step</button>
+          </div>
+        </div>
+        <div class="page addons">
+          <div>
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+          </div>
+          <div>
+            <label for="">
+              <input type="checkbox" name="" id="">
+            </label>
+            <label for="">
+              <input type="checkbox" name="" id="">
+            </label>
+            <label for="">
+              <input type="checkbox" name="" id="">
+            </label>
+          </div>
+          <div>
+            <button type="button">Go Back</button>
+            <button type="button">Next Step</button>
+          </div>
+        </div>
+        <div class="page page-finish">
+          <div>
+            <h1>Finishing up</h1>
+            <p>Double-check everything looks OK before confirming.</p>
+          </div>
+          <div>
+            <table></table>
+          </div>
+          <div>
+            <button type="button">Go Back</button>
+            <button type="button">Next Step</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+    
+
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
