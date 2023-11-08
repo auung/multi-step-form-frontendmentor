@@ -1,1 +1,17 @@
-/*# sourceMappingURL=index.css.map */
+form {
+  display: block;
+  width: 500px;
+  height: 500px;
+  border: solid 1px black;
+  position: relative;
+}
+form .container {
+  display: flex;
+  width: 2000px;
+  position: absolute;
+  left: 0px;
+}
+form .container .page {
+  width: 500px;
+  height: 500px;
+}/*# sourceMappingURL=index.css.map */

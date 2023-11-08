@@ -1,0 +1,19 @@
+form {
+  display: block;
+  width: 500px;
+  height: 500px;
+  border: solid 1px black;
+  position: relative;
+
+  .container {
+    display: flex;
+    width: 2000px;
+    position: absolute;
+    left: -0px;
+
+    .page {
+      width: 500px;
+      height: 500px;
+    }
+  }
+}
