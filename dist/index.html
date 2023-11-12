@@ -19,89 +19,69 @@
     </nav>
     <main>
       <form action="">
-        <div class="container">
-          <div class="page page-info current" id="1">
-            <div>
-              <h1>Personal Info</h1>
-              <p>Please provide your name, email address, and phone number.</p>
+        <div>
+          <h1></h1>
+          <p class="description"></p>
+        </div>
+        <div class="viewport-page">
+          <div class="container-page">
+            <div class="page page-info">
+              <div>
+                <label for="">Name</label>
+                <input type="text" name="name" id="name">
+                <p></p>
+              </div>
+              <div>
+                <label for="">Email Address</label>
+                <input type="email" name="email" id="email">
+                <p></p>
+              </div>
+              <div>
+                <label for="">Phone Number</label>
+                <input type="tel" name="phone" id="phone">
+                <p></p>
+              </div>
             </div>
-            <div>
-              <label for="">Name</label>
-              <input type="text" name="name" id="name">
-              <p></p>
+            <div class="page page-plan">
+              <div>
+                <label for="plan-arcade">
+                  <input type="radio" name="plan" id="plan-arcade">
+                </label>
+                <label for="plan-advanced">
+                  <input type="radio" name="plan" id="plan-advanced">
+                </label>
+                <label for="plan-pro">
+                  <input type="radio" name="plan" id="plan-pro">
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="plan-time" id="plan-time">
+              </div>
             </div>
-            <div>
-              <label for="">Email Address</label>
-              <input type="email" name="email" id="email">
-              <p></p>
+            <div class="page addons">
+              <div>
+                <label for="">
+                  <input type="checkbox" name="" id="">
+                </label>
+                <label for="">
+                  <input type="checkbox" name="" id="">
+                </label>
+                <label for="">
+                  <input type="checkbox" name="" id="">
+                </label>
+              </div>
             </div>
-            <div>
-              <label for="">Phone Number</label>
-              <input type="tel" name="phone" id="phone">
-              <p></p>
-            </div>
-            <div>
-              <button type="button" class="btn-next">Next Step</button>
-            </div>
-          </div>
-          <div class="page page-plan" id="2">
-            <div>
-              <h1>Select your Plans</h1>
-              <p>You have the option of monthly or yearly billing.</p>
-            </div>
-            <div>
-              <label for="plan-arcade">
-                <input type="radio" name="plan" id="plan-arcade">
-              </label>
-              <label for="plan-advanced">
-                <input type="radio" name="plan" id="plan-advanced">
-              </label>
-              <label for="plan-pro">
-                <input type="radio" name="plan" id="plan-pro">
-              </label>
-            </div>
-            <div>
-              <input type="checkbox" name="plan-time" id="plan-time">
-            </div>
-            <div>
-              <button type="button" class="btn-back">Go Back</button>
-              <button type="button" class="btn-next">Next Step</button>
-            </div>
-          </div>
-          <div class="page addons" id="3">
-            <div>
-              <h1>Pick add-ons</h1>
-              <p>Add-ons help enhance your gaming experience.</p>
-            </div>
-            <div>
-              <label for="">
-                <input type="checkbox" name="" id="">
-              </label>
-              <label for="">
-                <input type="checkbox" name="" id="">
-              </label>
-              <label for="">
-                <input type="checkbox" name="" id="">
-              </label>
-            </div>
-            <div>
-              <button type="button" class="btn-back">Go Back</button>
-              <button type="button" class="btn-next">Next Step</button>
+            <div class="page page-finish">
+              <div>
+                <table></table>
+              </div>
             </div>
           </div>
-          <div class="page page-finish" id="4">
-            <div>
-              <h1>Finishing up</h1>
-              <p>Double-check everything looks OK before confirming.</p>
-            </div>
-            <div>
-              <table></table>
-            </div>
-            <div>
-              <button type="button" class="btn-back">Go Back</button>
-              <button type="button" class="btn-next">Next Step</button>
-            </div>
-          </div>
+        </div>
+        <div class="container-action">
+          <button type="button" class="btn-back">Go Back</button>
+          <button type="button" class="btn-next">Next Step</button>
+          <button type="button" class="btn-confirm">Confirm</button>
         </div>
       </form>
     </main>
@@ -110,5 +90,7 @@
 
 
   <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/handleChangePage.js"></script>
+  <script type="module" src="js/Page.js"></script>
 </body>
 </html>

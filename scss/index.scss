@@ -3,17 +3,29 @@ form {
   width: 500px;
   height: 500px;
   border: solid 1px black;
-  position: relative;
 
-  .container {
-    display: flex;
-    width: 2000px;
-    position: absolute;
-    left: -0px;
+  .viewport-page {
+    position: relative;
+    width: 500px;
+    height: 200px;
 
-    .page {
-      width: 500px;
-      height: 500px;
+    .container-page {
+      display: flex;
+      width: 2000px;
+      position: absolute;
+      left: -0px;
+  
+      .page {
+        width: 500px;
+        height: 200px;
+      }
+    }
+  }
+
+  .container-action {
+    .btn-back,
+    .btn-confirm {
+      display: none;
     }
   }
 }

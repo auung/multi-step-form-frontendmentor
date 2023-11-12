@@ -3,15 +3,23 @@ form {
   width: 500px;
   height: 500px;
   border: solid 1px black;
-  position: relative;
 }
-form .container {
+form .viewport-page {
+  position: relative;
+  width: 500px;
+  height: 200px;
+}
+form .viewport-page .container-page {
   display: flex;
   width: 2000px;
   position: absolute;
   left: 0px;
 }
-form .container .page {
+form .viewport-page .container-page .page {
   width: 500px;
-  height: 500px;
+  height: 200px;
+}
+form .container-action .btn-back,
+form .container-action .btn-confirm {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
