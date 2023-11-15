@@ -28,18 +28,18 @@
             <div class="page page-info">
               <div>
                 <label for="">Name</label>
-                <input type="text" name="name" id="name">
-                <p></p>
+                <input type="text" name="name" id="name" required>
+                <p class="error error-name"></p>
               </div>
               <div>
                 <label for="">Email Address</label>
-                <input type="email" name="email" id="email">
-                <p></p>
+                <input type="email" name="email" id="email" required>
+                <p class="error error-email"></p>
               </div>
               <div>
                 <label for="">Phone Number</label>
-                <input type="tel" name="phone" id="phone">
-                <p></p>
+                <input type="tel" name="phone" id="phone" required>
+                <p class="error error-phone"></p>
               </div>
             </div>
             <div class="page page-plan">
@@ -91,6 +91,7 @@
 
   <script type="module" src="js/main.js"></script>
   <script type="module" src="js/handleChangePage.js"></script>
+  <script type="module" src="js/validateText.js"></script>
   <script type="module" src="js/Page.js"></script>
 </body>
 </html>
