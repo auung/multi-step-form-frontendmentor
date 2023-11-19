@@ -1,4 +1,4 @@
-import { Page } from "./Page.js";
+import { Page } from "../obj/Page.js";
 
 function changeFormInfo(currentPage) {
   const heading = document.getElementsByTagName("h1")[0];
