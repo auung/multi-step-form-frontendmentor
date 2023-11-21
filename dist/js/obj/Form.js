@@ -24,7 +24,7 @@ class Form {
 
   getBills() {
     let pricing;
-    let planCost;
+    let planCost = 0;
     let addOnCost = 0;
     switch (this.plan.billing) {
       case "monthly":
