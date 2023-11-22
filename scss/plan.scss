@@ -1,0 +1,99 @@
+.page-plan {
+  .plan-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    margin-bottom: 1.5em;
+
+    label {
+      background-color: transparent;
+    }
+
+    .custom-label {
+      display: flex;
+      gap: 1em;
+      padding: 1em;
+      border: var(--light-gray) 1px solid;
+      border-radius: 0.5em;
+
+      &:hover {
+        border-color: var(--marine-blue);
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .plan-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .plan-title {
+          font-weight: 700;
+        }
+
+        .plan-price {
+          color: var(--cool-gray);
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked ~ .custom-label {
+        border-color: var(--marine-blue);
+        background-color: var(--magnolia);
+      }
+    }
+  }
+
+  .billing {
+    background-color: var(--magnolia);
+    padding: 0.875rem 0;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    border-radius: 8px;
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .billing-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--cool-gray);
+    }
+
+    .selected {
+      transition: color 200ms ease-in-out;
+      color: var(--marine-blue);
+    }
+
+    .custom-checkbox {
+      display: flex;
+      width: 40px;
+      height: 20px;
+      background-color: var(--marine-blue);
+      border-radius: 50vh;
+      padding: 4px;
+
+      &-circle {
+        width: 12px;
+        height: 12px;
+        background-color: var(--alabaster);
+        border-radius: 50%;
+        transition: margin 200ms ease-in-out;
+      }
+
+      &-checked .custom-checkbox-circle {
+        margin-left: 20px;
+      }
+    }
+  }
+}

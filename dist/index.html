@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/info.css">
+  <link rel="stylesheet" href="css/plan.css">
+  <link rel="stylesheet" href="css/addons.css">
+  <link rel="stylesheet" href="css/finish.css">
   <link rel="stylesheet" href="css/utils.css">
   <title>Multi-step Form</title>
 </head>
@@ -47,22 +51,51 @@
                   </div>
                 </div>
                 <div class="page page-plan">
-                  <div>
+                  <div class="plan-container">
                     <label for="arcade">
-                      Arcade
                       <input type="radio" name="plan" id="arcade">
+                      <div class="custom-label">
+                        <div class="icon">
+                          <img src="../assets/images/icon-arcade.svg" alt="icon-arcade">
+                        </div>
+                        <div class="plan-info">
+                          <p class="plan-title">Arcade</p>
+                          <p class="plan-price">$9/mo</p>
+                        </div>
+                      </div>
                     </label>
                     <label for="advanced">
-                      Advanced
                       <input type="radio" name="plan" id="advanced">
+                      <div class="custom-label">
+                        <div class="icon">
+                          <img src="../assets/images/icon-advanced.svg" alt="icon-arcade">
+                        </div>
+                        <div class="plan-info">
+                          <p class="plan-title">Advanced</p>
+                          <p class="plan-price">$12/mo</p>
+                        </div>
+                      </div>
                     </label>
                     <label for="pro">
-                      Pro
                       <input type="radio" name="plan" id="pro">
+                      <div class="custom-label">
+                        <div class="icon">
+                          <img src="../assets/images/icon-pro.svg" alt="icon-arcade">
+                        </div>
+                        <div class="plan-info">
+                          <p class="plan-title">Pro</p>
+                          <p class="plan-price">$15/mo</p>
+                        </div>
+                      </div>
                     </label>
                   </div>
-                  <div>
+                  <div class="billing">
                     <input type="checkbox" name="billing" id="billing">
+                    <p class="billing-title billing-title-monthly selected">Monthly</p>
+                    <label for="billing" class="custom-checkbox">
+                      <div class="custom-checkbox-circle"></div>
+                    </label>
+                    <p class="billing-title billing-title-yearly">Yearly</p>
                   </div>
                 </div>
                 <div class="page addons">
@@ -103,6 +136,7 @@
   <script type="module" src="js/func/handleChangePage.js"></script>
   <script type="module" src="js/func/validateText.js"></script>
   <script type="module" src="js/func/getFormData.js"></script>
+  <script type="module" src="js/func/handleBilling.js"></script>
   <script type="module" src="js/obj/Form.js"></script>
   <script type="module" src="js/obj/Page.js"></script>
   <script type="module" src="js/obj/Pricing.js"></script>

@@ -1,0 +1,31 @@
+.page-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.page-info > div {
+  display: flex;
+  flex-direction: column;
+}
+.page-info > div label {
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.page-info > div input {
+  font-family: inherit;
+  font-size: 1rem;
+  text-indent: 1rem;
+  border: var(--light-gray) 1px solid;
+  background-color: transparent;
+  padding: 0.75rem 0;
+  border-radius: 4px;
+}
+.page-info > div input::-moz-placeholder {
+  font-weight: 500;
+  color: var(--cool-gray);
+}
+.page-info > div input::placeholder {
+  font-weight: 500;
+  color: var(--cool-gray);
+}/*# sourceMappingURL=info.css.map */

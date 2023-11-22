@@ -3,16 +3,19 @@ import { changeFormInfo } from "./func/changeFormInfo.js";
 import { getFormData } from "./func/getFormData.js";
 import { handleChangePage } from "./func/handleChangePage.js";
 import { validateText } from "./func/validateText.js";
+import { handleBilling } from "./func/handleBilling.js";
 
 const btnNext = document.getElementsByClassName("btn-next")[0];
 const btnBack = document.getElementsByClassName("btn-back")[0];
 const btnConfirm = document.getElementsByClassName("btn-confirm")[0];
+const inputBilling = document.getElementById("billing");
 
 let currentPage = 1;
 const form = new Form();
 
 window.addEventListener("load", () => {
   changeFormInfo(currentPage);
+  //handleChangePage(currentPage, "next"); // delete later
 })
 
 btnNext.addEventListener("click", () => {
@@ -41,4 +44,8 @@ btnBack.addEventListener("click", () => {
   if (currentPage == 1) {
     btnBack.style.display = "none";
   }
+})
+
+inputBilling.addEventListener("change", () => {
+  handleBilling(inputBilling.checked);
 })
