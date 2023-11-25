@@ -24,12 +24,12 @@ class Form {
 
   getBills() {
     let pricing;
-    let planCost = 0;
+    let planCost;
     let addOnCost = 0;
     switch (this.plan.billing) {
       case "monthly":
         pricing = new Pricing().getPrice("monthly");
-        planCost = pricing.plan[this.plan.type];
+        planCost = pricing.plan[this.plan.type] || 0;
         for (let i = 0; i < this.addons.length; i++) {
           addOnCost += pricing.addon[this.addons[i]];
         }

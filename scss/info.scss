@@ -7,10 +7,21 @@
     display: flex;
     flex-direction: column;
 
-    label {
-      font-size: var(--font-size-s);
-      font-weight: 500;
+    > div {
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 4px;
+
+      label {
+        font-size: var(--font-size-s);
+        font-weight: 500;
+      }
+
+      .error {
+        font-size: var(--font-size-s);
+        color: var(--strawberry-red);
+        font-weight: 700;
+      }
     }
 
     input {
@@ -22,11 +33,20 @@
       padding: 0.75rem 0;
       border-radius: 4px;
 
+      &:focus {
+        outline: var(--marine-blue) 1px solid;
+        outline-offset: -1px;
+      }
+
       &::placeholder {
-        // font-family: 'Ubuntu', sans-serif;
         font-weight: 500;
         color: var(--cool-gray);
       }
+    }
+
+    .input-error {
+      outline: var(--strawberry-red) 1px solid;
+      outline-offset: -1px;
     }
   }
 }
