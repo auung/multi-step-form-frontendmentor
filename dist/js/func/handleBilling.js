@@ -6,6 +6,10 @@ function handleBilling(checked) {
   const priceArcade = document.getElementById("price-arcade");
   const priceAdvanced = document.getElementById("price-advanced");
   const pricePro = document.getElementById("price-pro");
+  const priceOnline = document.getElementById("price-online");
+  const priceStorage = document.getElementById("price-storage");
+  const priceCustom = document.getElementById("price-custom");
+
 
   if (checked) {
     customCheckbox.classList.add("custom-checkbox-checked");
@@ -14,9 +18,12 @@ function handleBilling(checked) {
     for (let i = 0; i < planFree.length; i++) {
       planFree[i].setAttribute("data-display", "true");
     }
-    priceArcade.innerText = "$90/mo";
-    priceAdvanced.innerText = "$120/mo";
-    pricePro.innerText = "$150/mo";
+    priceArcade.innerText = "$90/yr";
+    priceAdvanced.innerText = "$120/yr";
+    pricePro.innerText = "$150/yr";
+    priceOnline.innerText = "+$10/yr";
+    priceStorage.innerText = "+$20/yr";
+    priceCustom.innerText = "+$20/yr";
   } else {
     customCheckbox.classList.remove("custom-checkbox-checked");
     titleMonthly.classList.add("selected");
@@ -27,6 +34,9 @@ function handleBilling(checked) {
     priceArcade.innerText = "$9/mo";
     priceAdvanced.innerText = "$12/mo";
     pricePro.innerText = "$15/mo";
+    priceOnline.innerText = "+$1/yr";
+    priceStorage.innerText = "+$2/yr";
+    priceCustom.innerText = "+$2/yr";
   }
 }
 

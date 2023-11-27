@@ -1,1 +1,57 @@
-/*# sourceMappingURL=addons.css.map */
+.page-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+.page-addons label {
+  display: block;
+}
+.page-addons label input {
+  display: none;
+}
+.page-addons label input:checked ~ .addon {
+  border-color: var(--marine-blue);
+  background-color: var(--magnolia);
+}
+.page-addons label input:checked ~ .addon .checkmark {
+  background-color: blue;
+}
+.page-addons label .addon {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: var(--light-gray) 1px solid;
+  border-radius: 8px;
+}
+.page-addons label .addon :hover {
+  border-color: var(--marine-blue);
+}
+.page-addons label .addon .checkmark {
+  margin-right: 1em;
+  border: var(--light-gray) 1px solid;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+}
+.page-addons label .addon .checkmark img {
+  width: 12px;
+  height: 8px;
+}
+.page-addons label .addon-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.page-addons label .addon-title {
+  font-size: 1rem;
+}
+.page-addons label .addon-description {
+  font-size: 12px;
+  color: var(--cool-gray);
+}
+.page-addons label .addon-price {
+  font-size: 14px;
+  color: var(--purplish-blue);
+  font-weight: 500;
+  margin-left: auto;
+}/*# sourceMappingURL=addons.css.map */

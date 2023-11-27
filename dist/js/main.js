@@ -15,24 +15,26 @@ const form = new Form();
 
 window.addEventListener("load", () => {
   changeFormInfo(currentPage);
-  //handleChangePage(currentPage, "next"); // delete later
+  // handleChangePage(currentPage, "next"); // delete later
 })
 
 btnNext.addEventListener("click", () => {
   const { info, plan, addons } = getFormData();
 
-  if (validateText(info)) {
-    form.setInfo(info);
-    form.setPlan(plan);
-    form.setAddons(addons);
-    handleChangePage(currentPage, "next");
-    currentPage++;
-    btnBack.style.display = "initial";
-    if (currentPage == 4) {
-      btnNext.style.display = "none";
-      btnConfirm.style.display = "initial";
+  if (currentPage != 2 || plan.type) {
+    if (validateText(info)) {
+      form.setInfo(info);
+      form.setPlan(plan);
+      form.setAddons(addons);
+      handleChangePage(currentPage, "next");
+      currentPage++;
+      btnBack.style.display = "initial";
+      if (currentPage == 4) {
+        btnNext.style.display = "none";
+        btnConfirm.style.display = "initial";
+      }
+      console.log(form.getBills());
     }
-    console.log(form.getBills());
   }
 })
 
