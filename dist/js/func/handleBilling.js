@@ -10,34 +10,21 @@ function handleBilling(checked) {
   const priceStorage = document.getElementById("price-storage");
   const priceCustom = document.getElementById("price-custom");
 
+  customCheckbox.classList.toggle("custom-checkbox-checked", checked);
+  titleMonthly.classList.toggle("selected", !checked);
+  titleYearly.classList.toggle("selected", checked);
 
-  if (checked) {
-    customCheckbox.classList.add("custom-checkbox-checked");
-    titleMonthly.classList.remove("selected");
-    titleYearly.classList.add("selected");
-    for (let i = 0; i < planFree.length; i++) {
-      planFree[i].setAttribute("data-display", "true");
-    }
-    priceArcade.innerText = "$90/yr";
-    priceAdvanced.innerText = "$120/yr";
-    pricePro.innerText = "$150/yr";
-    priceOnline.innerText = "+$10/yr";
-    priceStorage.innerText = "+$20/yr";
-    priceCustom.innerText = "+$20/yr";
-  } else {
-    customCheckbox.classList.remove("custom-checkbox-checked");
-    titleMonthly.classList.add("selected");
-    titleYearly.classList.remove("selected");
-    for (let i = 0; i < planFree.length; i++) {
-      planFree[i].setAttribute("data-display", "false");
-    }
-    priceArcade.innerText = "$9/mo";
-    priceAdvanced.innerText = "$12/mo";
-    pricePro.innerText = "$15/mo";
-    priceOnline.innerText = "+$1/yr";
-    priceStorage.innerText = "+$2/yr";
-    priceCustom.innerText = "+$2/yr";
+  const length = planFree.length;
+  for (let i = 0; i < length; i++) {
+    planFree[i].setAttribute("data-display", checked.toString());
   }
+
+  priceArcade.innerText = checked ? "$90/yr" : "$9/mo";
+  priceAdvanced.innerText = checked ? "$120/yr" : "$12/mo";
+  pricePro.innerText = checked ? "$150/yr": "$15/mo";
+  priceOnline.innerText = checked ? "+$10/yr" : "+$1/mo";
+  priceStorage.innerText = checked ? "+$20/yr" : "+$2/mo";
+  priceCustom.innerText = checked ? "+$20/yr" : "+$2/mo";
 }
 
 export { handleBilling };

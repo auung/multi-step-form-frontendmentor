@@ -10,7 +10,7 @@ const btnBack = document.getElementsByClassName("btn-back")[0];
 const btnConfirm = document.getElementsByClassName("btn-confirm")[0];
 const inputBilling = document.getElementById("billing");
 
-let currentPage = 1;
+let currentPage = 0;
 const form = new Form();
 
 window.addEventListener("load", () => {
@@ -21,31 +21,19 @@ window.addEventListener("load", () => {
 btnNext.addEventListener("click", () => {
   const { info, plan, addons } = getFormData();
 
-  if (currentPage != 2 || plan.type) {
-    if (validateText(info)) {
+  if (validateText(info)) {
+    if (currentPage == 0 || plan.type) {
       form.setInfo(info);
       form.setPlan(plan);
       form.setAddons(addons);
-      handleChangePage(currentPage, "next");
-      currentPage++;
-      btnBack.style.display = "initial";
-      if (currentPage == 4) {
-        btnNext.style.display = "none";
-        btnConfirm.style.display = "initial";
-      }
+      handleChangePage(++currentPage);
       console.log(form.getBills());
     }
   }
 })
 
 btnBack.addEventListener("click", () => {
-  handleChangePage(currentPage, "back");
-  currentPage--;
-  btnNext.style.display = "initial";
-  btnConfirm.style.display = "none";
-  if (currentPage == 1) {
-    btnBack.style.display = "none";
-  }
+  handleChangePage(--currentPage);
 })
 
 inputBilling.addEventListener("change", () => {

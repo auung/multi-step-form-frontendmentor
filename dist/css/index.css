@@ -99,6 +99,18 @@ main form .viewport-page .container-page {
   width: 400%;
   transition: margin-left 200ms ease-in-out;
 }
+main form .viewport-page .container-page[data-current-page="0"] {
+  margin-left: 0;
+}
+main form .viewport-page .container-page[data-current-page="1"] {
+  margin-left: -100%;
+}
+main form .viewport-page .container-page[data-current-page="2"] {
+  margin-left: -200%;
+}
+main form .viewport-page .container-page[data-current-page="3"] {
+  margin-left: -300%;
+}
 main form .viewport-page .container-page .page {
   width: 25%;
 }
@@ -106,9 +118,6 @@ main form .container-action {
   background-color: var(--alabaster);
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
-}
-main form .container-action:only-child {
   justify-content: flex-end;
 }
 main form .container-action .btn {
@@ -140,4 +149,13 @@ main form .container-action .btn-back {
 main form .container-action .btn-back:hover {
   color: var(--marine-blue);
   background-color: unset;
+}
+main form .container-action .show {
+  display: initial;
+}
+main form .container-action .hide {
+  display: none;
+}
+main form .multi-btn {
+  justify-content: space-between;
 }/*# sourceMappingURL=index.css.map */

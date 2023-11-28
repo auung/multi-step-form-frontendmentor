@@ -102,15 +102,29 @@ main {
   
     .viewport-page {
       overflow: hidden;
-      // width: 100%;
   
       .container-page {
         display: flex;
         width: 400%;
         transition: margin-left 200ms ease-in-out;
+
+        &[data-current-page="0"] {
+          margin-left: 0;
+        }
+
+        &[data-current-page="1"] {
+          margin-left: -100%;
+        }
+
+        &[data-current-page="2"] {
+          margin-left: -200%;
+        }
+
+        &[data-current-page="3"] {
+          margin-left: -300%;
+        }
     
         .page {
-          // width: 295px;
           width: 25%;
         }
       }
@@ -120,12 +134,8 @@ main {
       background-color: var(--alabaster);
       padding: 1rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
 
-      &:only-child {
-        justify-content: flex-end;
-      }
-  
       .btn {
         font-size: var(--font-size-s);
         font-family: inherit;
@@ -160,6 +170,18 @@ main {
           background-color: unset;
         }
       }
+
+      .show {
+        display: initial;
+      }
+      
+      .hide {
+        display: none;
+      }
+    }
+
+    .multi-btn {
+      justify-content: space-between;
     }
   }
 }
