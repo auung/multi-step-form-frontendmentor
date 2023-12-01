@@ -150,7 +150,25 @@
                 </div>
                 <div class="page page-finish">
                   <div>
-                    <table></table>
+                    <table class="bills">
+                      <tr class="plan">
+                        <td class="title">
+                          <p id="checkoutPlan"></p>
+                          <button type="button">Change</button>
+                        </td>
+                        <td class="price" id="checkoutPlanPrice">
+                          
+                        </td>
+                      </tr>
+                      <tr class="total">
+                        <td class="title">
+                          Total <span id="checkoutTotal"></span>
+                        </td>
+                        <td class="price" id="checkoutTotalPrice">
+                          
+                        </td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -174,7 +192,9 @@
   <script type="module" src="js/func/validateText.js"></script>
   <script type="module" src="js/func/getFormData.js"></script>
   <script type="module" src="js/func/handleBilling.js"></script>
+  <script type="module" src="js/func/handleCheckout.js"></script>
   <script type="module" src="js/obj/Form.js"></script>
   <script type="module" src="js/obj/Page.js"></script>
   <script type="module" src="js/obj/Pricing.js"></script>
+  <script type="module" src="js/obj/AddonUI.js"></script>
 </html>

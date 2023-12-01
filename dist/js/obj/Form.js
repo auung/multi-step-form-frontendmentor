@@ -24,27 +24,48 @@ class Form {
 
   getBills() {
     let pricing;
-    let planCost;
-    let addOnCost = 0;
+    let totalCost = 0;
+
     switch (this.plan.billing) {
       case "monthly":
         pricing = new Pricing().getPrice("monthly");
-        planCost = pricing.plan[this.plan.type] || 0;
-        for (let i = 0; i < this.addons.length; i++) {
-          addOnCost += pricing.addon[this.addons[i]];
-        }
         break;
 
       case "yearly":
         pricing = new Pricing().getPrice("yearly");
-        planCost = pricing.plan[this.plan.type];
-        for (let i = 0; i < this.addons.length; i++) {
-          addOnCost += pricing.addon[this.addons[i]];
-        }
         break;
     }
-    return { planCost, addOnCost };
+
+    let planCost = pricing.plan[this.plan.type] || 0;
+    totalCost += planCost;
+
+    let addonArray = this.addons.map(addon => {
+      const addonCost = pricing.addon[addon];
+      totalCost += addonCost;
+      return {
+        name: addon,
+        price: addonCost
+      }
+    })
+
+    let bills = {
+      billingType: this.plan.billing,
+      plan: {
+        name: this.plan.type,
+        price: planCost
+      },
+      addons: addonArray,
+      total: totalCost
+    }
+
+    return bills;
   }
 }
 
 export { Form };
+
+/*
+
+
+
+*/

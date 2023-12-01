@@ -1,6 +1,7 @@
 import { changeFormInfo } from "./changeFormInfo.js";
+import { handleCheckout } from "./handleCheckout.js";
 
-function handleChangePage(currentPage) {
+function handleChangePage(currentPage, bills) {
   const pageContainer = document.getElementsByClassName("container-page")[0];
   const currentNav = document.getElementsByClassName("current-page")[0];
   const newNav = document.getElementsByTagName("li")[currentPage];
@@ -21,6 +22,10 @@ function handleChangePage(currentPage) {
     newNav.classList.add("current-page");
     changeFormInfo(currentPage);
   }, 200);
+
+  if (currentPage == 3) {
+    handleCheckout(bills);
+  }
 }
 
 export { handleChangePage };
