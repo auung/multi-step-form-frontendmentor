@@ -151,22 +151,22 @@
                 <div class="page page-finish">
                   <div>
                     <table class="bills">
-                      <tr class="plan">
+                      <tr class="checkout-plan">
                         <td class="title">
                           <p id="checkoutPlan"></p>
-                          <button type="button">Change</button>
+                          <button type="button" id="btn-change">Change</button>
                         </td>
-                        <td class="price" id="checkoutPlanPrice">
-                          
-                        </td>
+                        <td class="price" id="checkoutPlanPrice"></td>
                       </tr>
+                    </table>
+                  </div>
+                  <div>
+                    <table>
                       <tr class="total">
                         <td class="title">
                           Total <span id="checkoutTotal"></span>
                         </td>
-                        <td class="price" id="checkoutTotalPrice">
-                          
-                        </td>
+                        <td class="price" id="checkoutTotalPrice"></td>
                       </tr>
                     </table>
                   </div>
@@ -184,8 +184,6 @@
     </main>
   </div>
     
-
-
   <script type="module" src="js/main.js"></script>
   <script type="module" src="js/func/changeFormInfo.js"></script>
   <script type="module" src="js/func/handleChangePage.js"></script>

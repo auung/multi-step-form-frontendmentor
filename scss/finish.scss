@@ -1,0 +1,72 @@
+.page-finish {
+  > div {
+    padding: 1.5em 1em 1em;
+    border-radius: 8px;
+  }
+
+  > div:first-child {
+    background-color: var(--magnolia);
+  }
+
+  table {
+    width: 100%;
+    row-gap: 1em;
+    border-collapse: collapse;
+    font-size: 15px;
+
+    .title {
+      color: var(--cool-gray);
+    }
+
+    .price {
+      text-align: right;
+    }
+
+    .checkout-plan {
+      .title {
+        p {
+          color: var(--marine-blue);
+          text-transform: capitalize;
+          font-size: 1rem;
+          font-weight: 700;
+          margin-bottom: 4px;
+        }
+
+        button {
+          font-family: inherit;
+          font-size: 1rem;
+          text-decoration: underline;
+          background-color: unset;
+          color: var(--cool-gray);
+          border: none;
+          cursor: pointer;
+        }
+      }
+      .price {
+        color: var(--marine-blue);
+        font-weight: 700;
+      }
+    }
+
+    .checkout-plan-addon {
+      td {
+        border-bottom: var(--light-gray) 1px solid;
+        padding-bottom: 0.875rem;
+      }
+    }
+
+    .checkout-addon {
+      td {
+        padding-top: 1em;
+      }
+    }
+
+    .total {
+      .price {
+        color: var(--purplish-blue);
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+  }
+}

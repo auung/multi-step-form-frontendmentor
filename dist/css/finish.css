@@ -1,1 +1,51 @@
-/*# sourceMappingURL=finish.css.map */
+.page-finish > div {
+  padding: 1.5em 1em 1em;
+  border-radius: 8px;
+}
+.page-finish > div:first-child {
+  background-color: var(--magnolia);
+}
+.page-finish table {
+  width: 100%;
+  row-gap: 1em;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.page-finish table .title {
+  color: var(--cool-gray);
+}
+.page-finish table .price {
+  text-align: right;
+}
+.page-finish table .checkout-plan .title p {
+  color: var(--marine-blue);
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.page-finish table .checkout-plan .title button {
+  font-family: inherit;
+  font-size: 1rem;
+  text-decoration: underline;
+  background-color: unset;
+  color: var(--cool-gray);
+  border: none;
+  cursor: pointer;
+}
+.page-finish table .checkout-plan .price {
+  color: var(--marine-blue);
+  font-weight: 700;
+}
+.page-finish table .checkout-plan-addon td {
+  border-bottom: var(--light-gray) 1px solid;
+  padding-bottom: 0.875rem;
+}
+.page-finish table .checkout-addon td {
+  padding-top: 1em;
+}
+.page-finish table .total .price {
+  color: var(--purplish-blue);
+  font-weight: 700;
+  font-size: 1rem;
+}/*# sourceMappingURL=finish.css.map */

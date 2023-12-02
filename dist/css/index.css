@@ -136,6 +136,9 @@ main form .container-action .btn {
 main form .container-action .btn:hover {
   background-color: var(--purplish-blue);
 }
+main form .container-action .btn-confirm {
+  background-color: var(--purplish-blue);
+}
 main form .container-action .btn-back,
 main form .container-action .btn-confirm {
   display: none;

@@ -8,8 +8,8 @@ import { handleBilling } from "./func/handleBilling.js";
 const btnNext = document.getElementsByClassName("btn-next")[0];
 const btnBack = document.getElementsByClassName("btn-back")[0];
 const btnConfirm = document.getElementsByClassName("btn-confirm")[0];
+const btnChange = document.getElementById("btn-change");
 const inputBilling = document.getElementById("billing");
-const addons = document.getElementsByName("addon");
 
 let currentPage = 0;
 const form = new Form();
@@ -40,4 +40,8 @@ btnBack.addEventListener("click", () => {
 
 inputBilling.addEventListener("change", () => {
   handleBilling(inputBilling.checked);
+})
+
+btnChange.addEventListener("click", () => {
+  handleChangePage(currentPage = 1);
 })
