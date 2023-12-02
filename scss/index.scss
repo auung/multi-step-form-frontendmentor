@@ -105,7 +105,7 @@ main {
   
       .container-page {
         display: flex;
-        width: 400%;
+        width: 500%;
         transition: margin-left 200ms ease-in-out;
 
         &[data-current-page="0"] {
@@ -123,9 +123,13 @@ main {
         &[data-current-page="3"] {
           margin-left: -300%;
         }
+
+        &[data-current-page="4"] {
+          margin-left: -400%;
+        }
     
         .page {
-          width: 25%;
+          width: 20%;
         }
       }
     }
@@ -182,6 +186,10 @@ main {
       .hide {
         display: none;
       }
+    }
+
+    .hide {
+      display: none;
     }
 
     .multi-btn {

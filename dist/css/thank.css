@@ -1,0 +1,18 @@
+.page-thank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-thank img {
+  width: 56px;
+  height: 56px;
+  margin: 1.5em;
+}
+.page-thank h2 {
+  margin-bottom: 1rem;
+}
+.page-thank p {
+  color: var(--cool-gray);
+  text-align: center;
+  line-height: 1.5;
+}/*# sourceMappingURL=thank.css.map */

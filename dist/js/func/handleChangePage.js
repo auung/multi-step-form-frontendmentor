@@ -9,22 +9,28 @@ function handleChangePage(currentPage, bills) {
   const btnBack = document.getElementsByClassName("btn-back")[0];
   const btnNext = document.getElementsByClassName("btn-next")[0];
   const btnConfirm = document.getElementsByClassName("btn-confirm")[0];
+  const containerFormTitle = document.getElementsByClassName("container-form-title")[0];
 
-  currentNav.classList.remove("current-page");
-  actionContainer.classList.toggle("multi-btn", currentPage > 0);
   pageContainer.setAttribute("data-current-page", currentPage.toString());
 
-  btnBack.classList.toggle("show", currentPage > 0);
-  btnNext.classList.toggle("hide", currentPage == 3);
-  btnConfirm.classList.toggle("show", currentPage == 3);
+  if (currentPage != 4) {
+    currentNav.classList.remove("current-page");
+    actionContainer.classList.toggle("multi-btn", currentPage > 0);
+    btnBack.classList.toggle("show", currentPage > 0);
+    btnNext.classList.toggle("hide", currentPage == 3);
+    btnConfirm.classList.toggle("show", currentPage == 3);
 
-  setTimeout(() => {
-    newNav.classList.add("current-page");
-    changeFormInfo(currentPage);
-  }, 200);
+    setTimeout(() => {
+      newNav.classList.add("current-page");
+      changeFormInfo(currentPage);
+    }, 200);
 
-  if (currentPage == 3) {
-    handleCheckout(bills);
+    if (currentPage == 3) {
+      handleCheckout(bills);
+    }
+  } else {
+    actionContainer.classList.toggle("hide", currentPage == 4);
+    containerFormTitle.classList.add("hide")
   }
 }
 

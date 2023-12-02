@@ -16,7 +16,7 @@ const form = new Form();
 
 window.addEventListener("load", () => {
   changeFormInfo(currentPage);
-  // handleChangePage(currentPage, "next"); // delete later
+  //handleChangePage(currentPage, "next"); // delete later
 })
 
 btnNext.addEventListener("click", () => {
@@ -36,6 +36,10 @@ btnNext.addEventListener("click", () => {
 btnBack.addEventListener("click", () => {
   handleChangePage(--currentPage);
   console.log(currentPage);
+})
+
+btnConfirm.addEventListener("click", () => {
+  handleChangePage(++currentPage);
 })
 
 inputBilling.addEventListener("change", () => {
