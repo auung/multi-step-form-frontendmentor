@@ -11,17 +11,37 @@
   <link rel="stylesheet" href="css/finish.css">
   <link rel="stylesheet" href="css/thank.css">
   <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/media.css">
   <title>Multi-step Form</title>
 </head>
 <body>
   <div class="bg">
-    <img src="../assets/images/bg-sidebar-mobile.svg" alt="bg-sidebar">
+    <picture>
+      <source media="(min-width: 769px)" srcset="../assets/images/bg-sidebar-desktop.svg">
+      <img src="../assets/images/bg-sidebar-mobile.svg" alt="bg-sidebar">
+    </picture>
     <nav>
-      <ul id="nav-list">
-        <li class="current-page">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
+      <ul class="flex-center" id="nav-list">
+        <li class="current-page">
+          <div class="flex-center">1</div>
+          <span class="step-number">Step 1</span>
+          <span class="step-name">Your Info</span>
+        </li>
+        <li>
+          <div class="flex-center">2</div>
+          <span class="step-number">Step 2</span>
+          <span class="step-name">Select Plan</span>
+        </li>
+        <li>
+          <div class="flex-center">3</div>
+          <span class="step-number">Step 3</span>
+          <span class="step-name">Add-ons</span>
+        </li>
+        <li>
+          <div class="flex-center">4</div>
+          <span class="step-number">Step 4</span>
+          <span class="step-name">Summary</span>
+        </li>
       </ul>
     </nav>
     <main>
@@ -109,45 +129,45 @@
                   </div>
                 </div>
                 <div class="page page-addons">
-                    <label for="online">
-                      <input type="checkbox" name="addon" id="online">
-                      <div class="addon">
-                        <div class="checkmark flex-center">
-                          <img src="../assets/images/icon-checkmark.svg" alt="icon-check">
-                        </div>
-                        <div class="addon-details-container">
-                          <h2 class="addon-title">Online service</h2>
-                          <p class="addon-description">Access to multiplayer games</p>
-                        </div>
-                        <p class="addon-price" id="price-online">+$1/mo</p>
+                  <label for="online">
+                    <input type="checkbox" name="addon" id="online">
+                    <div class="addon">
+                      <div class="checkmark flex-center">
+                        <img src="../assets/images/icon-checkmark.svg" alt="icon-check">
                       </div>
-                    </label>
-                    <label for="storage">
-                      <input type="checkbox" name="addon" id="storage">
-                      <div class="addon">
-                        <div class="checkmark flex-center">
-                          <img src="../assets/images/icon-checkmark.svg" alt="icon-check">
-                        </div>
-                        <div class="addon-details-container">
-                          <h2 class="addon-title">Larger storage</h2>
-                          <p class="addon-description">Extra 1TB of cloud save</p>
-                        </div>
-                        <p class="addon-price" id="price-storage">+$2/mo</p>
+                      <div class="addon-details-container">
+                        <h2 class="addon-title">Online service</h2>
+                        <p class="addon-description">Access to multiplayer games</p>
                       </div>
-                    </label>
-                    <label for="custom">
-                      <input type="checkbox" name="addon" id="custom">
-                      <div class="addon">
-                        <div class="checkmark flex-center">
-                          <img src="../assets/images/icon-checkmark.svg" alt="icon-check">
-                        </div>
-                        <div class="addon-details-container">
-                          <h2 class="addon-title">Customizable profile</h2>
-                          <p class="addon-description">Custom theme on your profile</p>
-                        </div>
-                        <p class="addon-price" id="price-custom">+$2/mo</p>
+                      <p class="addon-price" id="price-online">+$1/mo</p>
+                    </div>
+                  </label>
+                  <label for="storage">
+                    <input type="checkbox" name="addon" id="storage">
+                    <div class="addon">
+                      <div class="checkmark flex-center">
+                        <img src="../assets/images/icon-checkmark.svg" alt="icon-check">
                       </div>
-                    </label>
+                      <div class="addon-details-container">
+                        <h2 class="addon-title">Larger storage</h2>
+                        <p class="addon-description">Extra 1TB of cloud save</p>
+                      </div>
+                      <p class="addon-price" id="price-storage">+$2/mo</p>
+                    </div>
+                  </label>
+                  <label for="custom">
+                    <input type="checkbox" name="addon" id="custom">
+                    <div class="addon">
+                      <div class="checkmark flex-center">
+                        <img src="../assets/images/icon-checkmark.svg" alt="icon-check">
+                      </div>
+                      <div class="addon-details-container">
+                        <h2 class="addon-title">Customizable profile</h2>
+                        <p class="addon-description">Custom theme on your profile</p>
+                      </div>
+                      <p class="addon-price" id="price-custom">+$2/mo</p>
+                    </div>
+                  </label>
                 </div>
                 <div class="page page-finish">
                   <div>
@@ -173,7 +193,7 @@
                   </div>
                 </div>
                 <div class="page page-thank">
-                  <img src="../assets/images/icon-thank-you.svg" alt="icon-thank-you">
+                  <img id="thank-img" src="../assets/images/icon-thank-you.svg" alt="icon-thank-you">
                   <h2>Thank you!</h2>
                   <p>Thanks for confirming your subscription! We hope you have fun using our platform. If your ever need support, please feel free to email us at support@loremgaming.com</p>
                 </div>

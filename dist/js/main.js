@@ -16,7 +16,7 @@ const form = new Form();
 
 window.addEventListener("load", () => {
   changeFormInfo(currentPage);
-  //handleChangePage(currentPage, "next"); // delete later
+  handleChangePage(currentPage, "next"); // delete later
 })
 
 btnNext.addEventListener("click", () => {

@@ -1,0 +1,167 @@
+@media screen and (min-width: 769px) {
+  .flex-center, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .bg {
+    display: flex;
+    width: min(90%, 940px);
+    height: 600px;
+    background-color: var(--alabaster);
+    padding: 1em;
+    border-radius: 0.75em;
+    gap: 1em;
+  }
+  .bg picture {
+    left: 1em;
+    width: unset;
+  }
+  .bg nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 274px;
+    height: unset;
+    padding: 2em;
+    gap: 2em;
+  }
+  .bg nav ul li {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    grid-template-rows: 1fr 1fr;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+    row-gap: 3px;
+  }
+  .bg nav ul li div {
+    grid-row: 1/3;
+  }
+  .bg nav ul li span {
+    display: initial;
+  }
+  .bg nav ul li .step-number {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    color: var(--pastel-blue);
+  }
+  .bg nav ul li .step-name {
+    font-size: var(--font-size-s);
+    text-transform: uppercase;
+    color: var(--alabaster);
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .bg main {
+    width: 618px;
+    height: 100%;
+  }
+  .bg main form {
+    padding: 2.5em 5em 0;
+    justify-content: unset;
+    gap: 4em;
+  }
+  .bg main form .container {
+    padding: 0;
+  }
+  .bg main form .container-form {
+    margin-bottom: 0;
+    padding: 0;
+    background-color: unset;
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+  }
+  .bg main form .container-form .page {
+    padding: 0;
+  }
+  .bg main form .container-form .page-info {
+    gap: 1.25em;
+  }
+  .bg main form .container-form .page-info > div > div {
+    margin-bottom: 8px;
+  }
+  .bg main form .container-form .page-info > div > div label {
+    font-weight: 400;
+  }
+  .bg main form .container-form .page-info input {
+    font-weight: 500;
+    border-width: 2px;
+  }
+  .bg main form .container-form .page-info input:focus {
+    outline-width: 2px;
+    outline-offset: -2px;
+  }
+  .bg main form .container-form .page-info .input-error {
+    outline-width: 2px;
+    outline-offset: -2px;
+  }
+  .bg main form .container-form .page-plan .plan-container {
+    flex-direction: row;
+    gap: 18px;
+  }
+  .bg main form .container-form .page-plan .plan-container label {
+    display: block;
+    width: 100%;
+  }
+  .bg main form .container-form .page-plan .plan-container label .custom-label {
+    flex-direction: column;
+    height: 160px;
+    border-width: 2px;
+    justify-content: space-between;
+    padding: 19px;
+  }
+  .bg main form .container-form .page-addons {
+    gap: 1em;
+  }
+  .bg main form .container-form .page-addons label .addon {
+    padding: 1.25em 1.5em;
+  }
+  .bg main form .container-form .page-addons label .addon .checkmark {
+    margin-right: 1.5em;
+  }
+  .bg main form .container-form .page-addons label .addon-description {
+    font-size: var(--font-size-s);
+  }
+  .bg main form .container-form .page-addons label .addon-price {
+    font-size: 15px;
+  }
+  .bg main form .container-form .page-finish > div {
+    padding: 1.5rem;
+  }
+  .bg main form .container-form .page-finish table .total .price {
+    font-size: 1.125rem;
+  }
+  .bg main form .container-form .page-thank {
+    justify-content: center;
+    padding: 0.5em;
+  }
+  .bg main form .container-form .page-thank img {
+    width: 80px;
+    height: 80px;
+  }
+  .bg main form .container-form .page-thank .img-show {
+    margin-top: 7em;
+  }
+  .bg main form .container-form .page-thank h2 {
+    font-size: 2rem;
+  }
+  .bg main form h1 {
+    font-size: 2rem;
+    margin-bottom: 0.875rem;
+  }
+  .bg main form .description {
+    margin-bottom: 2.5em;
+  }
+  .bg main form .container-action {
+    background-color: unset;
+  }
+  .bg main form .container-action .btn {
+    font-size: 15px;
+    padding: 1em 1.75em;
+    border-radius: 8px;
+  }
+}/*# sourceMappingURL=media.css.map */

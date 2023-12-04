@@ -26,15 +26,22 @@ body {
   font-family: 'Ubuntu', sans-serif;
   color: var(--marine-blue);
   background-color: var(--light-blue);
+  position: relative; 
+  z-index: -3;
+}
 
-  .bg {
-    width: 100vw;
-    height: 100svh;
-    position: relative;
+.bg {
+  width: 100vw;
+  height: 100svh;
+  position: relative;
+  z-index: -2;
 
-    > img {
-      position: absolute;
-      z-index: -1;
+  picture {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+
+    img {
       width: 100%;
     }
   }
@@ -43,28 +50,30 @@ body {
 nav {
   ul {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
     gap: 1em;
     height: 100px;
-    align-items: center;
     
     li {
-      font-weight: 500;
-      background-color: transparent;
-      color: var(--light-blue);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 32px;
-      height: 32px;
-      border: var(--light-blue) 1px solid;
-      border-radius: 50%;
+      div {
+        font-weight: 500;
+        background-color: transparent;
+        color: var(--light-blue);
+        width: 32px;
+        height: 32px;
+        border: var(--light-blue) 1px solid;
+        border-radius: 50%;
+      }
+
+      span {
+        display: none;
+      }
     }
 
     .current-page {
-      background-color: var(--light-blue);
-      color: var(--marine-blue);
+      div {
+        background-color: var(--light-blue);
+        color: var(--marine-blue);
+      }
     }
   }
 }
@@ -150,7 +159,7 @@ main {
         padding: 0.75rem 1rem;
         border-radius: 4px;
         border: none;
-        transition: background-color 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
         cursor: pointer;
 
         &:hover {

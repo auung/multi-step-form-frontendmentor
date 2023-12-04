@@ -10,6 +10,7 @@ function handleChangePage(currentPage, bills) {
   const btnNext = document.getElementsByClassName("btn-next")[0];
   const btnConfirm = document.getElementsByClassName("btn-confirm")[0];
   const containerFormTitle = document.getElementsByClassName("container-form-title")[0];
+  const thankImg = document.getElementById("thank-img");
 
   pageContainer.setAttribute("data-current-page", currentPage.toString());
 
@@ -30,7 +31,8 @@ function handleChangePage(currentPage, bills) {
     }
   } else {
     actionContainer.classList.toggle("hide", currentPage == 4);
-    containerFormTitle.classList.add("hide")
+    containerFormTitle.classList.add("hide");
+    thankImg.classList.add("img-show");
   }
 }
 
